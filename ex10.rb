@@ -1,6 +1,6 @@
 =begin
 
-Exercise 10: What Was That?
+ExExercise 10: What Was That?
 
 In Exercise 9 I threw you some new stuff, just to keep you on your toes. I showed you two ways to make a string that
 goes across multiple lines. In the first way, I put the characters \n (backslash n) between the names of the months.

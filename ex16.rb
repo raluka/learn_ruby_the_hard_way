@@ -20,6 +20,11 @@ Execute "$ ruby ex16.rb test.txt" to run your file.
 
 filename = ARGV.first
 
+target = open(filename, 'r+')
+
+puts "Current content:"
+puts target.read
+
 puts "We are going to erase #{filename}."
 puts "If you don't want that, hit CTRL-C (^C)."
 puts "If you do want that, hit RETURN."
@@ -27,7 +32,6 @@ puts "If you do want that, hit RETURN."
 $stdin.gets
 
 puts "Opening the file..."
-target = open(filename, 'w')
 
 
 puts "Truncating the file. Goodbye!"
@@ -51,6 +55,9 @@ target.write("\n")
 target.write(line3)
 target.write("\n")
 
+puts "Current content:"
+target.seek(0)
+puts target.read
 
 puts "And finally, we close it."
 target.close
