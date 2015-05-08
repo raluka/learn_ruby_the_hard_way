@@ -52,4 +52,22 @@ your_array = looping_numbers(0, 2, [])
 puts "The numbers: "
 puts your_array
 
+# Add another variable to the function arguments that you can pass in that lets you change the + 1 on line 8 so you
+# can change how much it increments by.
+
+def complex_numbering(a, x , b, placeholder=[])
+  while a < x
+    puts "At the top number is this: #{a}"
+    placeholder.push(a)
+    a += b
+    puts "Numbers now: ", placeholder
+    puts "At the bottom number is now this: #{a}"
+    puts "Ta-na-naa! Staring again?" unless a == x
+  end
+  placeholder
+end
+
+counting_flowers = complex_numbering(0, 10, 2, [])
+puts "Your calculated numbers: "
+puts counting_flowers
 
